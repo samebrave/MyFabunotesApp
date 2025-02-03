@@ -124,9 +124,13 @@ fun EditNoteScreen(viewModel: NoteViewModel, noteId: Int, navController: NavCont
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 if (isSpeechRecognitionAvailable) {
-                    IconButton(
-                        onClick = { /* existing code */ }
-                    ) {
+                    IconButton(onClick = {
+                        val intent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH).apply {
+                            putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM)
+                            putExtra(RecognizerIntent.EXTRA_PROMPT, "Speak to add text to your note")
+                        }
+                        speechRecognizerLauncher.launch(intent)
+                    }) {
                         Icon(
                             Icons.Default.Mic,
                             contentDescription = "Voice Input",
