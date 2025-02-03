@@ -64,7 +64,7 @@ class NoteViewModel(application: Application) : AndroidViewModel(application) {
 
     private val client = OkHttpClient()
 
-    private val groqApiKey = "YOUR_API_KEY"
+    private val groqApiKey = "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"
 
     private val noteCache = mutableMapOf<Int, Note>()
     private val aiNoteCache = mutableMapOf<String, String>()
@@ -246,7 +246,7 @@ class NoteViewModel(application: Application) : AndroidViewModel(application) {
         return withContext(Dispatchers.IO) {
             aiNoteCache[prompt] ?: run {
                 val requestBody = JSONObject().apply {
-                    put("model", "llama-3.3-70b-versatile")
+                    put("model", "deepseek-r1-distill-llama-70b")
                     put("messages", JSONArray().put(JSONObject().apply {
                         put("role", "user")
                         put("content", prompt)

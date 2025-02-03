@@ -10,37 +10,21 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.lazy.LazyRow
+import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
-import androidx.compose.material.icons.filled.AutoAwesome
 import androidx.compose.material.icons.filled.Check
-import androidx.compose.material.icons.filled.FormatClear
-import androidx.compose.material.icons.filled.Map
 import androidx.compose.material.icons.filled.Mic
-import androidx.compose.material.icons.filled.Psychology
-import androidx.compose.material.icons.filled.PushPin
-import androidx.compose.material.icons.filled.Recommend
-import androidx.compose.material.icons.filled.Restaurant
-import androidx.compose.material.icons.filled.Summarize
-import androidx.compose.material.icons.filled.Translate
-import androidx.compose.material.icons.outlined.PushPin
-import androidx.compose.material3.BottomAppBar
 import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.Divider
-import androidx.compose.material3.DropdownMenu
-import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
@@ -135,21 +119,19 @@ fun EditNoteScreen(viewModel: NoteViewModel, noteId: Int, navController: NavCont
             Row(
                 modifier = getBottomBarContentModifier()
                     .fillMaxWidth()
-                    .padding(bottom = 16.dp),
+                    .padding(vertical = 8.dp), // Add equal vertical padding
                 horizontalArrangement = Arrangement.Start,
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 if (isSpeechRecognitionAvailable) {
                     IconButton(
-                        onClick = {
-                            val intent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH).apply {
-                                putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM)
-                                putExtra(RecognizerIntent.EXTRA_PROMPT, "Speak to add text to your note")
-                            }
-                            speechRecognizerLauncher.launch(intent)
-                        }
+                        onClick = { /* existing code */ }
                     ) {
-                        Icon(Icons.Default.Mic, contentDescription = "Voice Input")
+                        Icon(
+                            Icons.Default.Mic,
+                            contentDescription = "Voice Input",
+                            modifier = Modifier.size(36.dp)
+                        )
                     }
                 }
                 AIToolsDropdownMenu(

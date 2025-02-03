@@ -4,6 +4,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AutoAwesome
@@ -45,7 +46,11 @@ fun AIToolsDropdownMenu(
 
     Box {
         IconButton(onClick = { expanded = true }) {
-            Icon(Icons.Filled.AutoAwesome, contentDescription = "AI Tools")
+            Icon(
+                Icons.Filled.AutoAwesome,
+                contentDescription = "AI Tools",
+                modifier = Modifier.size(36.dp)  // Increase from default 24.dp
+            )
         }
 
         DropdownMenu(
@@ -126,8 +131,8 @@ val topAppBarModifier = Modifier
 @Composable
 fun getBottomBarContentModifier(): Modifier {
     return Modifier
-        .padding(horizontal = 16.dp, vertical = 8.dp)
+        .padding(horizontal = 16.dp, vertical = 8.dp) // Add vertical padding here
         .clip(RoundedCornerShape(24.dp))
         .background(MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.2f))
-        .padding(horizontal = 8.dp, vertical = 4.dp)
+        .padding(horizontal = 8.dp) // Remove vertical padding here
 }
