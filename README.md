@@ -22,10 +22,11 @@
 <a href="https://github.com/samebrave/MyFabunotesApp/blob/main/app/src/main/res/drawable/8.png" target="_blank">
     <img src="https://github.com/samebrave/MyFabunotesApp/blob/main/app/src/main/res/drawable/8.png" alt="Görsel 1" width="300" />
 </a>
-<a href="https://github.com/samebrave/MyFabunotesApp/blob/main/app/src/main/res/drawable/9.png" target="_blank">
-    <img src="https://github.com/samebrave/MyFabunotesApp/blob/main/app/src/main/res/drawable/9.png" alt="Görsel 1" width="300" />
-</a>
 <a href="https://github.com/samebrave/MyFabunotesApp/blob/main/app/src/main/res/drawable/10.png" target="_blank">
     <img src="https://github.com/samebrave/MyFabunotesApp/blob/main/app/src/main/res/drawable/10.png" alt="Görsel 1" width="300" />
 </a>  
+<a href="https://github.com/samebrave/MyFabunotesApp/blob/main/app/src/main/res/drawable/9.png" target="_blank">
+    <img src="https://github.com/samebrave/MyFabunotesApp/blob/main/app/src/main/res/drawable/9.png" alt="Görsel 1" width="300" />
+</a>
+
 
