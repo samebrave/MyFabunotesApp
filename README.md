@@ -1,4 +1,4 @@
-# Fabunotes
+# Fabunotes ✨
 
 This project is a modern note-taking application developed using Jetpack Compose and Kotlin, structured with the MVVM architecture, and integrated with the Groq AI API. It provides a user-friendly interface that allows you to easily take and manage your notes.
 
