@@ -9,6 +9,7 @@ This project is a modern note-taking application developed using Jetpack Compose
 - **AI Integration**: AI features powered by the Groq API.
 - **MVVM Architecture**: A clean and maintainable code structure.
 - **Backup**: Backup your notes easily with local backup.
+- **Multilingual**: Multilingual so you can use it in different languages.
 
 ## Installation
 
